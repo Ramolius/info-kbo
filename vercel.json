@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "name": "kbo-rank-app",
+  "public": true,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next",
+      "config": {
+        "buildCommand": "npm run build",
+        "devCommand": "npm run dev"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
